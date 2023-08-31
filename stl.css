@@ -1,0 +1,198 @@
+.header{
+    display:flex;
+   /* background-color: rgb(14, 13, 13);*/
+    height: 130px;
+    padding: 10px;
+    border-radius: 0%;
+    animation-delay: 0.5s;
+}
+header nav ul li{
+    display: inline-block;
+    padding: 10px;
+    margin-top: 25px;
+    margin-left: 10px;
+   
+}
+
+
+header nav ul li a{
+    padding: 15px;
+    color: rgb(37, 51, 46);
+    text-decoration: none;
+    
+    border: 3px solid rgb(245, 250, 245);
+    border-radius: 20%;
+    background-color: rgb(221, 166, 141);
+}
+nav{
+    margin-left: 100px;
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+} 
+.m img{
+    border-radius: 30%;
+}
+.para{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+#about h2{
+    text-align: center;
+}
+#home img{
+    border-radius: 5%;
+}
+body{
+    background-image: url("");
+    background-size: cover;
+}
+#menu{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    padding: 50px 50px;
+    grid-column-gap: 20px;
+    
+} 
+#d{
+    text-align: center;
+    
+}
+header nav ul li a:hover{
+    background-color: rgba(245, 93, 123, 0.556);
+    transition:0.2s;
+}
+.item img{
+    cursor:pointer;
+    transition: 0.2s ease;
+    
+}
+.item img:hover{
+    transform: scale(1.14);
+    box-shadow: 10px 10px 10px 10px pink;
+    border-radius: 20%;
+
+}
+.item h3{
+    text-align: center;
+}
+#reviews{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.mb{
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(240, 200, 181);
+    padding-top: 20px;
+}
+.col{
+    text-align: center;
+    background-color:rgb(176, 176, 230) ;
+}
+.col:hover{
+    background-color: blue;
+}
+footer{
+    text-align: center;
+    background-color: bisque;
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#home{
+    animation-delay: 1.5s;
+}
+.navbar {
+    animation-delay: 1s;
+
+}
+
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    nav {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .para {
+        margin: 20px 10px;
+    }
+
+    #menu {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 20px;
+    }
+
+    #home img {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #rev {
+        display: block;
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    #menu {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+    }
+}
+.m:hover {
+    transform: scale(1.1); /* Increase size on hover */
+    filter: brightness(1.2); /* Increase brightness on hover */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth animation */
+}
+
+/* Reset the animation when not hovering */
+.item img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .map {
+        margin-bottom: 30px; /* Add some spacing between the map and registration */
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Add this media query to adjust video width for mobile devices */
+@media (max-width: 768px) {
+    section#videos video {
+        width: 100%; /* Set video width to 100% of the container for mobile screens */
+        height: auto; /* Allow the height to adjust automatically */
+    }
+}
